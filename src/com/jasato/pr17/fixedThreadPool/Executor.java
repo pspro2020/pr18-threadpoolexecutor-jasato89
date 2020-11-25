@@ -18,7 +18,7 @@ public class Executor {
     }
     void shutdown() throws InterruptedException {
         fixedThreadPool.shutdown();
-        if (fixedThreadPool.awaitTermination(5, TimeUnit.SECONDS)) {
+        if (fixedThreadPool.awaitTermination(20, TimeUnit.SECONDS)) {
             System.out.printf("Fixed Executor -> Terminated. Completed: %d\n",
                     fixedThreadPool.getCompletedTaskCount());
         } else {

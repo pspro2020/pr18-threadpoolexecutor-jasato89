@@ -1,5 +1,7 @@
 package com.jasato.pr17.fixedThreadPool;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
 
     private static final int NUM_TIMES = 10;
@@ -11,6 +13,7 @@ public class Main {
             executor.execute(new Pow((double)i));
 
         }
+
 
         try {
             executor.shutdown();
